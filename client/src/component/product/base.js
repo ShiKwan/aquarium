@@ -13,20 +13,22 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { styling } from '../../styles';
 
 class Base extends Component {
-    renderRating = (rating) => {
+    renderRating = (rating, classes) => {
         switch (parseInt(rating)) {
             case 0:
-                return (<React.Fragment>Rating : <StarBorderIcon /></React.Fragment>);
+                return (<React.Fragment>Rating :
+                            <StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} />
+                        </React.Fragment>);
             case 1:
-                return (<React.Fragment>Rating : <StarIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon /></React.Fragment>);
+                return (<React.Fragment>Rating : <StarIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /></React.Fragment>);
             case 2:
-                return (<React.Fragment>Rating : <StarIcon /><StarIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon /></React.Fragment>);
+                return (<React.Fragment>Rating : <StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /></React.Fragment>);
             case 3:
-                return (<React.Fragment>Rating : <StarIcon /><StarIcon /><StarIcon /><StarBorderIcon /><StarBorderIcon /></React.Fragment>);
+                return (<React.Fragment>Rating : <StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /></React.Fragment>);
             case 4:
-                return (<React.Fragment>Rating : <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarBorderIcon /></React.Fragment>);
+                return (<React.Fragment>Rating : <StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /></React.Fragment>);
             case 5:
-                return (<React.Fragment>Rating : <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon /></React.Fragment>);
+                return (<React.Fragment>Rating : <StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon} /></React.Fragment>);
             default:
                 break;
 
@@ -35,24 +37,24 @@ class Base extends Component {
         renderDimensions = (objDimensions) => {
             return(
                 <Grid container justify='flex-end' direction='row' alignItems='center' spacing={16}>
-                    <Grid item sm={2} md={2} lg={2}>
-                        Dimension :
+                    <Grid item sm={3} md={3} lg={2}>
+                        <b>Dimension</b>
                     </Grid>
                     <Grid item sm={1} md={1} lg={1}>
-                        <Paper>
-                            Height <br />
+                        <Paper className={this.props.classes.dimensionPaper}>
+                            <label className={this.props.classes.dimensionContainer}>H</label> <br />
                             {objDimensions.height}
                         </Paper>
                     </Grid>
                     <Grid item sm={1} md={1} lg={1}>
-                        <Paper>
-                            Width <br />
+                        <Paper className={this.props.classes.dimensionPaper}>
+                            <label className={this.props.classes.dimensionContainer}>W</label> <br />
                             {objDimensions.width}
                         </Paper>
                     </Grid>
                     <Grid item sm={1} md={1} lg={1}>
-                        <Paper>
-                            Depth <br />
+                        <Paper className={this.props.classes.dimensionPaper}>
+                            <label className={this.props.classes.dimensionContainer}>D</label> <br />
                             {objDimensions.depth}
                         </Paper>
                     </Grid>
@@ -63,14 +65,14 @@ class Base extends Component {
         const { product, classes } = this.props;
         return (
             <React.Fragment>
-                <Grid container>
+                <Grid container className={classes.baseContainer}>
                     <Grid item sm={7} md={7} lg={7}><h1>{product.name}</h1></Grid>
                     <Grid item sm={5} md={5} lg={5}><h1>{product.price}</h1></Grid>
-                    <Grid item sm={12} md={12} lg={12}><h3>{product.modalNumber}</h3></Grid>
+                    <Grid item sm={12} md={12} lg={12}><h3>Product No. {product.modalNumber}</h3></Grid>
                     {product.dimension ? this.renderDimensions(product.dimension) : <CircularProgress />}
-                    <Grid item sm={12} md={12} lg={12}><p>{product.description}</p></Grid>
-                    <Grid item sm={12}><label> {this.renderRating(product.rating)} </label></Grid>
-                    <Grid item sm={6} md={6} lg={6}>
+                    <Grid item sm={12} md={12} lg={12}><p className={classes.productDescription}>{product.description}</p></Grid>
+                    <Grid item sm={12}><label> {this.renderRating(product.rating, classes)} </label></Grid>
+                    <Grid item sm={6} md={6} lg={6} className={classes.socialContainer}>
                         Share this to your social media feeds! <br />
                         <img src={fbIcon} className={classes.socialIcon} style={{ transition: 'all .7s ease' }} />
                         <img src={tweeterIcon} className={classes.socialIcon} style={{ transition: 'all .7s ease' }} />

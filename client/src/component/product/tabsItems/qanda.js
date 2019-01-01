@@ -9,12 +9,12 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 class specification extends Component {
     renderQA = (QA, classes) => {
         return (
-                QA.map((item) => {
+                QA.map((item, index) => {
                 return (
-                    <Grid container className={classes.productReviewContainer}>
+                    <Grid container className={index % 2 == 0 ? classes.faqContainerOdd : classes.faqContainerEven}>
                         <Grid item sm={10} md={10} lg={10}>
-                            <label>Question : {item.question}</label> <br/>
-                            <label>Answer : {item.answer}</label> <br />
+                            <label className={classes.question}>{item.question}</label> <br/>
+                            <label className={classes.answer}>Answer : <br /> &nbsp;&nbsp;&nbsp;{item.answer}</label> <br />
                         </Grid>
                     </Grid>
                 )
@@ -28,8 +28,7 @@ class specification extends Component {
         return (
             <React.Fragment>
                 <Grid container direction='row' justify='center' alignItems='center'>
-                    <Grid item sm={6} md={6} lg={6}>
-                        <Divider />
+                    <Grid item sm={10} md={10} lg={10}>
                         {product.QA ? <div>{this.renderQA(product.QA, classes)}</div> : null}
                     </Grid>
 

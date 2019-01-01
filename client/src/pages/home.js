@@ -26,8 +26,9 @@ class Home extends Component {
                 <Hero />
                 <Featured />
                 <Rating />
-                <AllProducts />
+                <Goal />
                 <Service />
+                <AllProducts />
             </React.Fragment>
         );
     }

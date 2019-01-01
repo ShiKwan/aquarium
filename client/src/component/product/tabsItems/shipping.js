@@ -2,18 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withStyles, Grid, Divider } from '@material-ui/core';
 import { styling } from '../../../styles';
-import StarIcon from '@material-ui/icons/Star';
-import HalfStarIcon from '@material-ui/icons/StarHalf';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+import bettaImg from '../../../images/goal1Transparent.png';
 
 class shipping extends Component {
     renderShipping = (shippingInfo, classes) => {
         return (
             <Grid container className={classes.shippingContainer}>
                 <Grid item sm={10} md={10} lg={10}>
+                    <h3>Shipping</h3>
                     Shipping Weight : {shippingInfo.shippingWeight} <br/>
-                    domestic shipping : {shippingInfo.domesticShipping} <br />
-                    international shipping : {shippingInfo.internationalShipping}
+                    Domestic Shipping : {shippingInfo.domesticShipping} <br />
+                    International Shipping : {shippingInfo.internationalShipping}
+                    <Divider />
+                    <h3>Warranty</h3>
+                    <label>
+                        Warranty applies to the original purchaser against defects and workmanship for ONE year from the date of original purchase.
+                    </label>
+                    <Divider/>
+                    <h3>Returns</h3>
+                    <label> We have 30 days return policy</label>
                 </Grid>
             </Grid>
         )
@@ -26,8 +33,11 @@ class shipping extends Component {
         return (
             <React.Fragment>
                 <Grid container direction='row' justify='left' alignItems='left'>
-                    <Grid item sm={6} md={6} lg={6}>
+                    <Grid item sm={8} md={8} lg={8}>
                         {product.shippingInfo ? <div>{this.renderShipping(product.shippingInfo, classes)}</div> : null}
+                    </Grid>
+                    <Grid item sm={4} md={4} lg={4}>
+                        <img src={bettaImg} alt='decorative image' className={classes.shippingImg} />
                     </Grid>
 
                 </Grid>

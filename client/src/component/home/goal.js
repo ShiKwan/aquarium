@@ -10,43 +10,24 @@ class Nav extends Component {
     render() {
         const { classes } = this.props
         return (
-            <React.Fragment >
-                <div className={classes.startContainer}>
-                    <Parallax
-                        offsetYMax={100}
-                        offsetYMin={-100}
-                        slowerScrollRate
-                        className={classes.ring}
-                        tag="figure">
-
-                        <img src={backgroundImg} className={classes.parallaxOuter}/>
-                    </Parallax>
-                    <Parallax
-                        offsetYMax={50}
-                        offsetYMin={-50}
-                        slowerScrollRate
-                        className={classes.circle}
-                        tag="figure"
-                    >
-                        <img src={fishImg} style={{ width: '150px' }} className={classes.parallaxInner} />
-                    </Parallax>
-                    <Grid container>
-                        <Grid item sm={1} md={1} xs={0}></Grid>
-                        <Grid item sm={10} md={10} xs={12} className={classes.homepageHeader}>
-                            <h2>Our Goal</h2>
-                            <h3>Innovating in pet fish industry to provide you the most modern looking aquarium that create a WOW effect in your living space.</h3>
-
-
-
+            <div className={classes.goalContainer}>
+                <div className={classes.parallaxGoal}>
+                    <div className={classes.startContainer}>
+                        <Grid container>
+                            <Grid item sm={1} md={1} xs={0}></Grid>
+                            <Grid item sm={10} md={10} xs={12} className={classes.homepageHeader}>
+                                <h2 className={classes.headerShadow}>Our Goal</h2>
+                                <label className={classes.subHeader}>Innovating in pet fish industry to provide you the most modern looking aquarium that create a WOW effect in your living space.</label>
+                            </Grid>
+                            <Grid item sm={1} md={1} xs={0}></Grid>
 
                         </Grid>
-                        <Grid item sm={1} md={1} xs={0}></Grid>
 
-                    </Grid>
-
+                    </div>
                 </div>
 
-            </React.Fragment>
+
+            </div>
         );
     }
 }

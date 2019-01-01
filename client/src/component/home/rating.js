@@ -20,35 +20,40 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const reviews = [
     {
-        label: 'Jane Pilowski - San Franscisco',
+        label: 'Jane Pilowski',
+        from : 'San Franscisco, CA',
         review: 'Love the clear glass and the beautiful design!',
         rating : 5,
         imgPath:
             'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
     },
     {
-        label: 'SK Tan - Cleveland, OH',
+        label: 'SK Tan',
+        from: 'Cleveland, OH',
         review: 'Great price point for a high quality tank.',
         rating : 4,
         imgPath:
             'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
     },
     {
-        label: 'Theo - Omaha, Nebraska',
+        label: 'Theo',
+        from : 'Omaha, NE',
         review: 'Would recommend this tank for everyone!',
         rating : 5,
         imgPath:
             'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
     },
     {
-        label: 'Chong Nguyen, Las Vegas, Nevada',
+        label: 'Chong Nguyen',
+        from : 'Las Vegas, NV',
         review : 'Tank is packaged perfectly upon arrival, and very easy to setup',
         rating : 5,
         imgPath:
             'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
     },
     {
-        label: 'Peter Yao, Shenzhen, China',
+        label: 'Peter Yao',
+        from: 'Shenzhen, China',
         review : 'Tank is beautifully made, great layout for fixing the LED lighting on top of the tank. ',
         rating : 4,
         imgPath:
@@ -76,33 +81,33 @@ class SwipeableTextMobileStepper extends React.Component {
     handleStepChange = activeStep => {
         this.setState({ activeStep });
     };
-    renderRating = (rating) => {
+    renderRating = (rating, classes) => {
         switch(rating) {
             case 0 :
             return(
                 <React.Fragment>
-                    <StarBorderIcon />
+                    <StarBorderIcon className={classes.starIcon}/>
                 </React.Fragment>
             );
 
             case 1 :
                 return(
                     <React.Fragment>
-                        <StarIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon />
+                        <StarIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon}/>
                     </React.Fragment>
                     );
             case 2 :
                 return(
                     <React.Fragment>
-                        <StarIcon /><StarIcon /><StarBorderIcon /><StarBorderIcon /><StarBorderIcon />
+                        <StarIcon  className={classes.starIcon} /><StarIcon className={classes.starIcon} /><StarBorderIcon className={classes.starIcon}/><StarBorderIcon className={classes.starIcon}/><StarBorderIcon className={classes.starIcon}/>
                     </React.Fragment>
                     );
             case 3 :
-                return (<React.Fragment><StarIcon /><StarIcon /><StarIcon /><StarBorderIcon /><StarBorderIcon /></React.Fragment>);
+                return (<React.Fragment><StarIcon className={classes.starIcon}/><StarIcon className={classes.starIcon}/><StarIcon className={classes.starIcon}/><StarBorderIcon className={classes.starIcon}/><StarBorderIcon className={classes.starIcon}/></React.Fragment>);
             case 4 :
-                return (<React.Fragment><StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarBorderIcon /></React.Fragment>);
+                return (<React.Fragment><StarIcon className={classes.starIcon} /><StarIcon className={classes.starIcon}/><StarIcon className={classes.starIcon}/><StarIcon className={classes.starIcon}/><StarBorderIcon className={classes.starIcon}/></React.Fragment>);
             case 5 :
-                return (<React.Fragment><StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon /></React.Fragment>);
+                return (<React.Fragment><StarIcon  className={classes.starIcon} /><StarIcon className={classes.starIcon}/><StarIcon className={classes.starIcon}/><StarIcon className={classes.starIcon}/><StarIcon className={classes.starIcon}/></React.Fragment>);
             default :
             break;
 
@@ -139,8 +144,8 @@ class SwipeableTextMobileStepper extends React.Component {
 
                                             <Grid item sm={6} md={6} lg={6}>
                                                 <h1 className={classes.ratingLabel}>"{step.review}"</h1>
-                                                <h4>- {step.label}</h4> <br />
-                                                <h3>Rating : {this.renderRating(reviews[activeStep].rating)}</h3>
+                                                <h4>- {step.label} ({step.from})</h4> <br />
+                                                <h3>Rating : {this.renderRating(reviews[activeStep].rating, classes)}</h3>
                                             </Grid>
                                             <Grid item sm={6} md={6} lg={6}>
                                                 <img src={step.imgPath} />

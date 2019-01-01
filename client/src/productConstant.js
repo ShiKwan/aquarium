@@ -20,14 +20,18 @@ export const product1 =
         ],
         description: `A modern looking 5 gallon nano aquarium with etched-glass tank with aluminium trim on four edges. It comes with low energy consumption and powerful 37 LED Lighting System
                                 to keep your freshwater pets healthy and stimulate plant growth. A well-thought filtration system that is capable of boasting powerful 3-stage system with oversized mechanical, chemical, and biological media for clean water.`,
+        additionalDescription : `This minimalistic 5 gallon tank can be showcase anywhere due to the compactness, the curved durable well-polished temprered glass walls is the signature of Aquoria Tec's product that display your gorgeous fishes under the LED Light. No matter where you place this aquarium,
+        it will become a great conversation starter for your guests. `,
         rating : '4',
         dimension : {
             width : `17.2 in`,
             depth : `6.3 in`,
             height : `10.6 in`
         },
-        weight : '8 lbs',
-
+        weight : '8',
+        glassThickness : '10mm',
+        pumpWatts : `25`,
+        flowRate : `200`,
         shippingInfo : {
             shippingWeight: '12.5 lbs',
             domesticShipping : 'Item can be shipped within U.S.',
@@ -37,6 +41,7 @@ export const product1 =
         modalNumber : `AQ100001`,
         warranty : `warranty`,
         manual : `manual`,
+        tabsPrimaryImage: `${primarySampleImg}`,
         primaryImage: `${primarySampleImg}`,
         secondaryImages : [
             `${primarySampleImg}`,
@@ -48,7 +53,10 @@ export const product1 =
         ],
         review : [
             {
-                label: 'Jane Pilowski - San Franscisco',
+                firstName: 'Jane',
+                lastName : 'Pilowski',
+                label : 'Jane Pilowski',
+                from : 'San Franscisco, CA',
                 review: 'Love the clear glass and the beautiful design!',
                 depthReview: `This is a beautiful, safe tank with powerful cleaning power and we love it.
                 That is once you get past the first 48 hours of sheer panic as it whips your betta around as it swims itself near to exhaustion,
@@ -58,7 +66,10 @@ export const product1 =
                 rating: 5,
             },
             {
-                label: 'SK Tan - Cleveland, OH',
+                firstName: 'SK',
+                lastName: 'Tan',
+                label: 'SK Tan',
+                from : 'Cleveland, OH',
                 review: 'Great price point for a high quality tank.',
                 depthReview: `The way my tank is decorated in the pictures is much too bare for a betta. They like to hide.
                 I've since added a floating betta log, and a whole bunch of tall silk plants, and he's much happier.
@@ -69,7 +80,10 @@ export const product1 =
                 rating: 4,
             },
             {
-                label: 'Theo - Omaha, Nebraska',
+                firstName: 'Theo',
+                lastName: 'Kaunda',
+                label: 'Theo Kaunda',
+                from: 'Omaha, NE',
                 review: 'Would recommend this tank for everyone!',
                 depthReview: `I love this product and so far (three weeks after set up), everything is working great.
                 I had some trouble sprouting the seeds and used a basil plant from the store. I cut a hole into the white sponge and inserted the plant with the roots.
@@ -80,7 +94,10 @@ export const product1 =
                 rating: 5,
             },
             {
-                label: 'Chong Nguyen, Las Vegas, Nevada',
+                firstName: 'Chong',
+                lastName: 'Nguyen',
+                label: 'Chong Nguyen, ',
+                from: 'Las Vegas, NV',
                 review: 'Tank is packaged perfectly upon arrival, and very easy to setup',
                 depthReview: `Do I recommend this? So far, absolutely yes! I'm so biased, and I probably should dock a star for it but I know I won't,
                 but I do wish they would clear up some descriptions and pictures, it would have avoided some of my own confusion (and I wouldn't have a fish without a "home").
@@ -88,7 +105,10 @@ export const product1 =
                 rating: 5,
             },
             {
-                label: 'Peter Yao, Shenzhen, China',
+                firstName: 'Peter',
+                lastName: 'Yao',
+                label: 'Peter Yao',
+                from: 'Shenzhen, China',
                 review: 'Tank is beautifully made, great layout for fixing the LED lighting on top of the tank. ',
                 depthReview: ` I am no fish/tank expert. I was looking for a reasonably sized tank that was good looking and would be a good fit for my Betta.
                 I bought the 3 gallon version (the 5 gallon is simply taller.) Clean lines, modern aesthetic, really good looking tank for at work and/or at home.

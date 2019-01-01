@@ -15,6 +15,12 @@ import hero14Img from './images/hero14.jpg'
 import hero15Img from './images/hero15.jpg'
 import hero16Img from './images/hero16.jpg'
 import hero17Img from './images/hero17.jpg'
+import goal1Img from './images/goal1.jpg'
+import goal2Img from './images/goal2.jpg';
+import goal3Img from './images/goal3.jpg'
+import goal4Img from './images/goal4.jpg'
+import goal5Img from './images/goal5.jpg'
+import { relative } from 'path';
 
 const color1 = "#004C7F";
 const color2 = '#50B9FF';
@@ -29,6 +35,20 @@ export const styling = theme => ({
     navBar : {
         background : 'black',
         color :'white',
+    },
+    avatar : {
+        background: `${color5}`,
+    },
+    heroButton : {
+        background: `${color5}`,
+        marginTop: '190px',
+        color: 'white',
+        border: 'solid 1px #007ACC',
+        '&:hover': {
+            background: "white",
+            color: `${color5}`,
+            border: 'solid 1px #007ACC',
+        },
     },
     button : {
         background: `${color5}`,
@@ -45,12 +65,24 @@ export const styling = theme => ({
     },
     parallax: {
         backgroundImage: `url(${hero13Img})`,
+        position: 'relative',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        minHeight: '860px',
-        maxHeight: '860px',
+        minHeight: '1000px',
+        maxHeight: '1000px',
+        maxWidth: '100vw !immportant',
+    },
+    parallaxGoal : {
+        backgroundImage: `url(${goal2Img})`,
+        position: 'relative',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        minHeight: '550px',
+        maxHeight: '550px',
         maxWidth: '100vw !immportant',
     },
     logo : {
@@ -65,9 +97,9 @@ export const styling = theme => ({
         alignSelf : 'center',
         position: 'absolute',
         maxWidth: '1200px',
-        maxHeight: '350px',
-        height: '350px',
-        top: "12%",
+        maxHeight: '450px',
+        height: '450px',
+        top: "23%",
         left: 0,
         right: 0,
         margin: 'auto',
@@ -78,7 +110,7 @@ export const styling = theme => ({
     },
     headerShadow : {
         textShadow : '2px 2px 2px black',
-        fontFamily: 'Roboto',
+        fontFamily: 'Montserrat, San-Serif',
         fontSize : '65px',
         letterSpacing : '2px',
         fontWeight: `bold`,
@@ -86,7 +118,7 @@ export const styling = theme => ({
     },
     subHeader : {
         textShadow: '2px 2px 2px black',
-        fontFamily: 'Roboto',
+        fontFamily: 'Montserrat, San-Serif',
         fontSize: '36px',
 
     },
@@ -95,7 +127,7 @@ export const styling = theme => ({
         lineHeight : '1.5',
         fontSize : '22px',
         textShadow: '2px 2px 2px black',
-        fontFamily: 'Roboto',
+        fontFamily: 'Montserrat, San-Serif',
         letterSpacing : '2px',
     },
     navLogo : {
@@ -117,10 +149,33 @@ export const styling = theme => ({
     homepageButton : {
         color : 'white',
     },
+    goalContainer : {
+        textAlign: 'center',
+        minHeight: '550px',
+        color: 'white',
+        alignSelf: 'center',
+        zIndex: '5',
+        position: 'absolute',
+        display : 'contents',
+        maxHeight: '350px',
+
+        left: 0,
+        right: 0,
+        margin: 'auto',
+    },
     startContainer : {
-        position : 'relative',
         textAlign : 'center',
         minHeight : '660px',
+        color: 'white',
+        alignSelf: 'center',
+        zIndex : '5',
+        position: 'absolute',
+        maxWidth: '1200px',
+        maxHeight: '350px',
+        height: '350px',
+        left: 0,
+        right: 0,
+        margin: 'auto',
     },
     parallaxOuter : {
         position: 'relative',
@@ -150,6 +205,7 @@ export const styling = theme => ({
         maxHeight: '600px',
         display: 'grid',
         alignSelf: 'center',
+        background : 'lightgrey',
     },
     featureItemContainer : {
 
@@ -159,9 +215,7 @@ export const styling = theme => ({
     },
     allProductsContainer : {
         color : 'white',
-        backgroundImage: `url(${hero15Img})`,
-        backgroundSize: 'cover',
-        backgroundPosition : 'center',
+        background: 'linear-gradient(lightgrey 2%, black 32%)',
         textAlign: 'center',
         minHeight : '400px',
         display: 'flex',
@@ -208,7 +262,9 @@ export const styling = theme => ({
         display : 'flex',
         alignItems : 'center',
     },
-
+    ratingStarsContainer : {
+        textAlign : 'center',
+    },
     listContainer : {
         listStyle : 'none',
     },
@@ -221,7 +277,7 @@ export const styling = theme => ({
         lineHeight : '1.5',
     },
     serviceContainer : {
-        background: `#dbf3fa`,
+        background: `lightgrey`,
         textAlign : 'center',
     },
     serviceItemContainer : {
@@ -229,13 +285,10 @@ export const styling = theme => ({
 
     },
     servicePaper : {
-        minHeight : '200px',
-        background: `#dbf3fa`,
-        color : `#566d7e`,
-        '&:hover': {
-            color: `#5e767e`,
-            background: `#78CBE2`,
-        },
+        minHeight : '330px',
+        background: `darkgrey`,
+        color : `white`,
+
     },
     serviceItemHeader : {
         lineHeight: '2.5',
@@ -262,9 +315,36 @@ export const styling = theme => ({
         verticalAlign : 'middle',
         color : 'white',
     },
+    baseContainer : {
+        margin : '20px 20px',
+    },
+    socialContainer : {
+        display: 'block',
+        margin : '20px 0 20px',
+    },
+    productDetailBaseContainer : {
+        marginTop : '20px',
+        marginBottom : '20px',
+    },
+    specList : {
+        listStyle : 'none',
+    },
     productDetailsButton : {
         display : 'flex',
         float : 'right',
+        background: `${color5}`,
+        color: 'white',
+        border: 'solid 1px #007ACC',
+        '&:hover': {
+            background: "white",
+            color: `${color5}`,
+            border: 'solid 1px #007ACC',
+        },
+    },
+    productSpecsContainer : {
+        fontSize : '20px',
+        lineHeight : '1.5',
+        listStyle : 'none',
     },
     productPrimaryImage : {
         height : '450px !important',
@@ -273,6 +353,14 @@ export const styling = theme => ({
     productSecondaryImages : {
         height : '80px',
         width : 'auto',
+    },
+    dimensionPaper : {
+        display : 'grid',
+        alignItems : 'center',
+        textAlign : 'center',
+        background : `darkgrey`,
+        padding : `5px 0 5px 0`,
+        color : 'white',
     },
     socialIcon : {
         height : '45px',
@@ -284,9 +372,65 @@ export const styling = theme => ({
             cursor : 'pointer',
         },
     },
-    productReviewContainer : {
+    comesWithContainer : {
+        padding : '50px',
+        lineHeight: '1.2',
+        fontSize: '22px',
+    },
+    productSubImage : {
+        display : 'grid',
+        alignItems: 'center',
+        textAlign : '-webkit-center',
+
+    },
+    productDescription : {
+        fontSize : '20px',
+        padding : '20px 0',
+    },
+    productSubDescription : {
+        padding : '50px',
+        lineHeight : '1.5',
+        fontSize : '26px',
+    },
+    productReviewContainerEven : {
         minHeight : '350px',
         display : 'flex',
         alignItems : 'center',
+        background: 'rgba(0, 0, 0, 0.24)',
+        padding: '0 30px 0 30px',
+    },
+    productReviewContainerOdd : {
+        minHeight: '350px',
+        display: 'flex',
+        alignItems: 'center',
+        background: 'rgba(0, 0, 0, 0.14)',
+        padding: '0 30px 0 30px',
+    },
+    faqContainerEven : {
+        display : 'flex',
+        alignItems : 'center',
+        padding : '20px',
+        margin : '2px 0 2px 0',
+        background: 'rgba(0, 0, 0, 0.24)',
+    },
+    faqContainerOdd: {
+        display: 'flex',
+        background: 'rgba(0, 0, 0, 0.14)',
+        alignItems: 'center',
+        margin: '2px 0 2px 0',
+        padding: '20px',
+    },
+    question : {
+        fontWeight : 'bold',
+    },
+    answer : {
+        margin : '20px 0 20px 0',
+    },
+    shippingContainer : {
+        fontSize : '24px',
+        lineHeight : '1.5',
+    },
+    shippingImg : {
+        width : '100%',
     }
 });

@@ -43,9 +43,10 @@ class FullWidthTabs extends React.Component {
                         onChange={this.handleChange}
                         indicatorColor="primary"
                         textColor="primary"
+                        className={classes.productTabs}
                         fullWidth
                     >
-                        <Tab label="Specifications" />
+                        <Tab label="Specifications" className={classes.productTab} />
                         <Tab label="Rating & Reviews" />
                         <Tab label="Questions & Answers" />
                         <Tab label="Shipping & Returns" />

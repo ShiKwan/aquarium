@@ -20,7 +20,7 @@ class Home extends Component {
         const { product, classes } = this.props;
         return (
             <React.Fragment>
-                <Grid container >
+                <Grid container className={classes.productDetailBaseContainer}>
                     <Grid item sm={1} md={1} lg={1}></Grid>
                     <Grid item sm={4} md={4} lg={4}><ImageSelector primary={product.primaryImage} secondaries={product.secondaryImages} /></Grid>
                     <Grid item sm={6} md={6} lg={6}><Base /></Grid>

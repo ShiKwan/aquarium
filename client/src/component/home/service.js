@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import {withStyles} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import {styling} from '../../styles';
@@ -12,14 +14,19 @@ class Service extends Component {
         return(
             <div className={classes.root}>
                 <Grid container className={classes.serviceContainer}>
-                    <Grid item sm={12} md={12} lg={12}><h1 className={classes.serviceHeader}>Services</h1><Divider style={{background : 'cornflowerblue'}}/></Grid>
+                    <Grid item sm={12} md={12} lg={12}><h1 className={classes.serviceHeader}>Services</h1><Divider style={{background : 'darkgrey'}}/></Grid>
 
                     <Grid item sm={4} md={4} lg={4} className={classes.serviceItemContainer}>
                         <Paper className={classes.servicePaper} style={{ transition: 'all .7s ease' }}>
                             <h3 className={classes.serviceItemHeader}>Product Manual</h3>
                             <div>
-                                <label className={classes.serviceItem}>5 Gal Marine Aquarium Kit</label><br/>
-                                <label className={classes.serviceItem}>8 Gal Marine Aquarium Kit</label>
+                                <label className={classes.serviceItem} >all our product manual can be find here, please contact us if you are having trouble finding one.</label>
+                                <br />
+                                <Button variant='outlined' className={classes.button}>All Product Manuals</Button>
+                            </div>
+                            <div>
+                                <h4>Featured Product User Manual </h4>
+                                <Link to='/product/aquoriaTec5Gal.pdf'><label>5 Gal Aquoria Tec Marine Aquarium Kit</label></Link>
                             </div>
                         </Paper>
 
@@ -35,9 +42,9 @@ class Service extends Component {
                     </Grid>
                     <Grid item sm={4} md={4} lg={4} className={classes.serviceItemContainer}>
                         <Paper className={classes.servicePaper} style={{ transition: 'all .7s ease' }}>
-                            <h3 className={classes.serviceItemHeader}>Shipping Info</h3>
+                            <h3 className={classes.serviceItemHeader}>Affiliation Program</h3>
                             <div>
-                                <label className={classes.serviceItem}>We guaranteed that our products are professionally packed, and ships with the fast delivery speeds. </label>
+                                <label className={classes.serviceItem}>we always looking forward for opportunities to expand, <br/>please contact us for affiliate opportunities. </label>
                             </div>
                         </Paper>
                     </Grid>

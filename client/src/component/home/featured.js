@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core';
 import { styling } from '../../styles';
 
 import Button from '@material-ui/core/Button';
-import tankImg from '../../images/tank.jpeg';
+import tankImg from '../../images/tankTransparent.png';
 import StarIcon from '@material-ui/icons/Star';
 import HalfStarIcon from '@material-ui/icons/StarHalf';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
@@ -17,7 +17,6 @@ class Featured extends Component {
         return(
             <React.Fragment>
                 <Grid container className={classes.featuredContainer}>
-                    <h1></h1>
                     <Grid container className={classes.featureItemContainer}>
                         <Grid item lg={1} md={1} sm={1}></Grid>
                         <Grid item lg={5} md={5} sm={5} className={classes.featuredImage}>
