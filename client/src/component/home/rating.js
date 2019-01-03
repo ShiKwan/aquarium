@@ -41,7 +41,7 @@ const reviews = [
         review: 'Would recommend this tank for everyone!',
         rating : 5,
         imgPath:
-            'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+            'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=60',
     },
     {
         label: 'Chong Nguyen',
@@ -54,7 +54,7 @@ const reviews = [
     {
         label: 'Peter Yao',
         from: 'Shenzhen, China',
-        review : 'Tank is beautifully made, great layout for fixing the LED lighting on top of the tank. ',
+        review : 'Tank is beautifully made, great layout for fixing the LED lighting on top of the tank.',
         rating : 4,
         imgPath:
             'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
@@ -121,33 +121,31 @@ class SwipeableTextMobileStepper extends React.Component {
 
         return (
             <div className={classes.ratingContainer}>
-                <Paper square elevation={0} className={classes.ratingHeader}>
-                    <Typography className={classes.ratingHeaderText}></Typography>
-                </Paper>
+
                 <Grid container>
-                    <Grid item md={4} lg={4} sm={4} className={classes.reviewHeader}>
+                    <Grid item md={12} lg={3} sm={12} xs={12} className={classes.reviewHeader}>
                         <h1>Customer Reviews</h1>
                     </Grid>
-                    <Grid item md={8} lg={8} sm={8}>
+                    <Grid item md={12} lg={8} sm={12} xs={10} className={classes.ratingItemContainer}>
                         <AutoPlaySwipeableViews
                             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                            springConfig={{stifness : 300}}
+                            springConfig={{stifness : 100}}
                             index={activeStep}
-                            interval={5000}
+                            interval={55000}
                             onChangeIndex={this.handleStepChange}
                             enableMouseEvents
                         >
                             {reviews.map((step, index) => (
                                 <div key={step.label} className={classes.ratingContent}>
                                     {Math.abs(activeStep - index) <= 2 ? (
-                                        <Grid container>
+                                        <Grid container >
 
-                                            <Grid item sm={6} md={6} lg={6}>
-                                                <h1 className={classes.ratingLabel}>"{step.review}"</h1>
+                                            <Grid item sm={12} md={12} lg={6} xs={12}>
+                                                <label className={classes.ratingLabel}>"{step.review}"</label>
                                                 <h4>- {step.label} ({step.from})</h4> <br />
                                                 <h3>Rating : {this.renderRating(reviews[activeStep].rating, classes)}</h3>
                                             </Grid>
-                                            <Grid item sm={6} md={6} lg={6}>
+                                            <Grid item sm={12} md={12} lg={6} xs={12} className={classes.ratingImgContainer}>
                                                 <img src={step.imgPath} />
                                             </Grid>
                                         </Grid>

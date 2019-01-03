@@ -80,7 +80,7 @@ class specification extends Component {
         return (
             <React.Fragment>
                 <Grid container direction='row' justify='center' alignItems='center'>
-                    <Grid item sm={6} md={6} lg={6}>
+                    <Grid item sm={10} md={10} lg={10}>
                         <Divider />
                         {product.review ? <div>{this.renderReviews(product.review, classes)}</div> : null}
                     </Grid>

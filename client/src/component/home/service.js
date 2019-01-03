@@ -14,24 +14,27 @@ class Service extends Component {
         return(
             <div className={classes.root}>
                 <Grid container className={classes.serviceContainer}>
-                    <Grid item sm={12} md={12} lg={12}><h1 className={classes.serviceHeader}>Services</h1><Divider style={{background : 'darkgrey'}}/></Grid>
+                    <Grid item sm={12} md={12} lg={12}><h1 className={classes.serviceHeader}>Services</h1></Grid>
 
-                    <Grid item sm={4} md={4} lg={4} className={classes.serviceItemContainer}>
+                    <Grid item sm={12} md={4} lg={4} xs={12} className={classes.serviceItemContainer}>
                         <Paper className={classes.servicePaper} style={{ transition: 'all .7s ease' }}>
                             <h3 className={classes.serviceItemHeader}>Product Manual</h3>
-                            <div>
-                                <label className={classes.serviceItem} >all our product manual can be find here, please contact us if you are having trouble finding one.</label>
-                                <br />
-                                <Button variant='outlined' className={classes.button}>All Product Manuals</Button>
-                            </div>
-                            <div>
+                            <div className={classes.subServiceItem}>
                                 <h4>Featured Product User Manual </h4>
                                 <Link to='/product/aquoriaTec5Gal.pdf'><label>5 Gal Aquoria Tec Marine Aquarium Kit</label></Link>
+
+                            </div>
+                            <Divider />
+                            <div className={classes.subServiceItem}>
+                                <label className={classes.serviceItem} >all our product manual can be find here, please contact us if you are having trouble finding one.</label>
+                                <br />
+                                <br/>
+                                <Button variant='outlined' className={classes.button}>All Product Manuals</Button>
                             </div>
                         </Paper>
 
                     </Grid>
-                    <Grid item sm={4} md={4} lg={4} className={classes.serviceItemContainer}>
+                    <Grid item sm={12} md={4} lg={4} xs={12} className={classes.serviceItemContainer}>
                         <Paper className={classes.servicePaper} style={{ transition: 'all .7s ease' }}>
                             <h3 className={classes.serviceItemHeader}>Warranty Information</h3>
                             <div>
@@ -40,7 +43,7 @@ class Service extends Component {
                             </div>
                         </Paper>
                     </Grid>
-                    <Grid item sm={4} md={4} lg={4} className={classes.serviceItemContainer}>
+                    <Grid item sm={12} md={4} lg={4} xs={12} className={classes.serviceItemContainer}>
                         <Paper className={classes.servicePaper} style={{ transition: 'all .7s ease' }}>
                             <h3 className={classes.serviceItemHeader}>Affiliation Program</h3>
                             <div>

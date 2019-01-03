@@ -9,7 +9,7 @@ class Hero extends Component {
 
 
     handleConnectToday() {
-        //this.props.history.push(this.state.redirectAddress)
+        this.props.history.push('/product')
     }
 
     render() {
@@ -34,7 +34,7 @@ class Hero extends Component {
 
                             </div>
                             <div>
-                                <Button variant='outlined' className={classes.heroButton} onClick={() => this.handleConnectToday()}>Go to products</Button>
+                                <Button variant='outlined' className={classes.heroButton} onClick={() => this.handleConnectToday()}>All Products</Button>
                             </div>
                         </div>
                     </Grid>

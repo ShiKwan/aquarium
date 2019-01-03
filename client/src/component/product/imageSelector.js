@@ -33,7 +33,7 @@ class imageSelector extends Component {
         return(
             <React.Fragment>
                 <Grid container>
-                    <Grid item sm={10} md={10} lg={10}>
+                    <Grid item xs={10} sm={10} md={10} lg={10}>
                         <ReactImageMagnify className = {classes.productPrimaryImage} {... {
                             smallImage : {
                                 alt : product.name,

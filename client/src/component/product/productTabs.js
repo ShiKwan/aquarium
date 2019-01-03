@@ -36,17 +36,18 @@ class FullWidthTabs extends React.Component {
         const { classes, theme } = this.props;
 
         return (
-            <div className={classes.root}>
+            <React.Fragment>
                 <AppBar position="static" color="default">
                     <Tabs
                         value={this.state.value}
                         onChange={this.handleChange}
                         indicatorColor="primary"
                         textColor="primary"
-                        className={classes.productTabs}
                         fullWidth
+                        scrollable
+                        scrollButtons="auto"
                     >
-                        <Tab label="Specifications" className={classes.productTab} />
+                        <Tab label="Features" />
                         <Tab label="Rating & Reviews" />
                         <Tab label="Questions & Answers" />
                         <Tab label="Shipping & Returns" />
@@ -62,7 +63,7 @@ class FullWidthTabs extends React.Component {
                     <TabContainer dir={theme.direction}><QA/></TabContainer>
                     <TabContainer dir={theme.direction}><Shipping/></TabContainer>
                 </SwipeableViews>
-            </div>
+            </React.Fragment>
         );
     }
 }

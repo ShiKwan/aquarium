@@ -33,31 +33,63 @@ export const styling = theme => ({
         flexGrow : 1,
     },
     navBar : {
-        background : 'black',
+        background: `rgba(0, 0, 0, 0.75)`,
+        zIndex :'10',
         color :'white',
+        position : 'fixed',
+        left : 0,
+        top : 0,
+        width : '100%',
     },
     avatar : {
         background: `${color5}`,
+        [theme.breakpoints.down('sm')]: {
+            marginRight : '10px',
+        },
+    },
+    hypHome : {
+        textDecoration : 'none',
+        color : 'white',
+        opacity : `1 !important`,
     },
     heroButton : {
-        background: `${color5}`,
+        fontSize : '22px',
+        background: `white`,
         marginTop: '190px',
-        color: 'white',
-        border: 'solid 1px #007ACC',
+        color: '#272727',
+        border: 'solid 1px #272727',
         '&:hover': {
-            background: "white",
-            color: `${color5}`,
-            border: 'solid 1px #007ACC',
+            background: "#272727",
+            color: `white`,
+            border: 'solid 1px #272727',
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '120px',
         },
     },
     button : {
-        background: `${color5}`,
+        background: `#272727`,
         color : 'white',
-        border: 'solid 1px #007ACC',
+        border: 'solid 1px #272727',
         '&:hover': {
-            background: "white",
-            color: `${color5}`,
-            border : 'solid 1px #007ACC',
+            background: "gray",
+            color: `#272727`,
+            border : 'solid 1px #272727',
+        },
+    },
+    serviceButton: {
+        float : 'right',
+        background: `#272727`,
+        color: 'white',
+        border: 'solid 1px #272727',
+        '&:hover': {
+            background: "darkgrey",
+            color: `#272727`,
+            border: 'solid 1px #272727',
+        },
+        [theme.breakpoints.down('sm')]: {
+            float : 'initial',
+            marginBottom : '30px',
         },
     },
     parallaxItem : {
@@ -73,6 +105,15 @@ export const styling = theme => ({
         minHeight: '1000px',
         maxHeight: '1000px',
         maxWidth: '100vw !immportant',
+
+        [theme.breakpoints.down('sm')]: {
+            backgroundColor: 'black',
+            backgroundSize: '100%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            backgroundColor: 'black',
+            backgroundSize: 'cover',
+        },
     },
     parallaxGoal : {
         backgroundImage: `url(${goal2Img})`,
@@ -83,13 +124,18 @@ export const styling = theme => ({
         backgroundSize: 'cover',
         minHeight: '550px',
         maxHeight: '550px',
+        display: 'flex',
         maxWidth: '100vw !immportant',
+        [theme.breakpoints.down('sm')]: {
+            backgroundColor: 'black',
+            backgroundSize: '100%',
+        },
     },
     logo : {
         width : '50px',
         height : '50px',
         margin : '5px',
-        display: 'flex',
+        display: 'block',
         alignSelf : 'center',
     },
     hero: {
@@ -103,6 +149,9 @@ export const styling = theme => ({
         left: 0,
         right: 0,
         margin: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            top: "10%",
+        },
     },
     wow : {
         color : 'yellow',
@@ -115,11 +164,21 @@ export const styling = theme => ({
         letterSpacing : '2px',
         fontWeight: `bold`,
         textTransform: `uppercase`,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '40px',
+            letterSpacing: '1px',
+        },
     },
     subHeader : {
         textShadow: '2px 2px 2px black',
         fontFamily: 'Montserrat, San-Serif',
         fontSize: '36px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '20px',
+            letterSpacing: '1px',
+            display: 'flex',
+
+        },
 
     },
     heroDescription : {
@@ -129,6 +188,10 @@ export const styling = theme => ({
         textShadow: '2px 2px 2px black',
         fontFamily: 'Montserrat, San-Serif',
         letterSpacing : '2px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '16px',
+            letterSpacing: '1px',
+        },
     },
     navLogo : {
         display: 'flex',
@@ -141,6 +204,15 @@ export const styling = theme => ({
         display : 'flex',
         alignSelf : 'center',
         flexDirection : 'row-reverse',
+    },
+    navItemPhone: {
+        float: 'right',
+        display: 'flex',
+        alignSelf: 'center',
+        flexDirection: 'row-reverse',
+        [theme.breakpoints.down('sm')]: {
+            display : 'none',
+        },
     },
     topNavButton : {
         height : '36px',
@@ -158,21 +230,21 @@ export const styling = theme => ({
         position: 'absolute',
         display : 'contents',
         maxHeight: '350px',
-
         left: 0,
         right: 0,
         margin: 'auto',
+
     },
     startContainer : {
         textAlign : 'center',
-        minHeight : '660px',
+        minHeight : '360px',
         color: 'white',
         alignSelf: 'center',
         zIndex : '5',
-        position: 'absolute',
+        position: 'initial',
         maxWidth: '1200px',
-        maxHeight: '350px',
-        height: '350px',
+        maxHeight: '360px',
+        height: '360px',
         left: 0,
         right: 0,
         margin: 'auto',
@@ -201,8 +273,7 @@ export const styling = theme => ({
         fontSize : '22px',
     },
     featuredContainer : {
-        minHeight: '600px',
-        maxHeight: '600px',
+        minHeight: '650px',
         display: 'grid',
         alignSelf: 'center',
         background : 'lightgrey',
@@ -211,7 +282,8 @@ export const styling = theme => ({
 
         boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)`,
         minHeight : '400px',
-        verticalAlign : 'center',
+        verticalAlign : 'middle',
+        textAlign : 'center',
     },
     allProductsContainer : {
         color : 'white',
@@ -221,6 +293,10 @@ export const styling = theme => ({
         display: 'flex',
         alignItems : 'center',
     },
+    rootProductTab : {
+        flexGrow: 1,
+        width: '100%',
+    },
     ratingHeader: {
         display: 'grid',
         textAlign : 'left',
@@ -229,8 +305,12 @@ export const styling = theme => ({
         paddingLeft: theme.spacing.unit * 4,
         backgroundColor: theme.palette.background.default,
     },
+    ratingItemContainer : {
+        display: 'unset',
+        alignSelf: 'center',
+    },
     reviewHeader : {
-        display : 'grid',
+        display : 'block',
         alignSelf : 'center',
         textAlign : 'center',
         fontSize : '25px',
@@ -240,15 +320,18 @@ export const styling = theme => ({
         fontWeight : 'bold',
     },
     ratingContent : {
-        display: 'grid',
+        display: 'block',
         textAlign: 'center',
     },
     ratingLabel: {
-        display: 'block',
+        display: 'contents',
+        alignItems : 'center',
         minHeight: '40px',
         marginTop: '20px',
         marginBottom: '20px',
         overflow: 'hidden',
+        fontSize : '25px',
+        fontWeight : 'bold',
         width: '100%',
     },
     starIcon : {
@@ -259,7 +342,7 @@ export const styling = theme => ({
         minHeight: '400px',
         verticalAlign: 'middle',
         margin: 'auto',
-        display : 'flex',
+        display : '-webkit-box',
         alignItems : 'center',
     },
     ratingStarsContainer : {
@@ -273,7 +356,7 @@ export const styling = theme => ({
     },
     serviceHeader : {
         fontSize : '36px',
-        color: `#566d7e`,
+        color: `#272727`,
         lineHeight : '1.5',
     },
     serviceContainer : {
@@ -285,10 +368,12 @@ export const styling = theme => ({
 
     },
     servicePaper : {
-        minHeight : '330px',
+        minHeight : '400px',
         background: `darkgrey`,
-        color : `white`,
-
+        color: `#272727`,
+    },
+    subServiceItem : {
+        padding : '0 20px 20px 20px',
     },
     serviceItemHeader : {
         lineHeight: '2.5',
@@ -299,6 +384,9 @@ export const styling = theme => ({
         lineHeight : '1.5',
         fontSize : '22px',
         padding : '0 10px 0 10px',
+        [theme.breakpoints.down('md')]: {
+            fontSize : '16px',
+        },
     },
     footerContainer : {
         borderTop: '1px solid black',
@@ -323,8 +411,12 @@ export const styling = theme => ({
         margin : '20px 0 20px',
     },
     productDetailBaseContainer : {
-        marginTop : '20px',
+        marginTop : '120px',
         marginBottom : '20px',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '150px',
+            marginLeft : '10px',
+        },
     },
     specList : {
         listStyle : 'none',
@@ -332,19 +424,37 @@ export const styling = theme => ({
     productDetailsButton : {
         display : 'flex',
         float : 'right',
-        background: `${color5}`,
+        background: `#272727`,
         color: 'white',
-        border: 'solid 1px #007ACC',
+        border: 'solid 1px #272727',
         '&:hover': {
             background: "white",
-            color: `${color5}`,
-            border: 'solid 1px #007ACC',
+            color: `#272727`,
+            border: 'solid 1px #272727',
+        },
+    },
+    allProductsButton : {
+        display: '-webkit-inline-box',
+        fontSize : '22px',
+        alignItems: 'center',
+        background: `${color5}`,
+        color: `white`,
+        border: 'solid 1px darkgray',
+        '&:hover': {
+            background: `gray`,
+            color: `black`,
+            border: `solid 1px darkgray`,
         },
     },
     productSpecsContainer : {
         fontSize : '20px',
         lineHeight : '1.5',
         listStyle : 'none',
+        [theme.breakpoints.down('sm')]: {
+            padding: '10px',
+            lineHeight: '1.2',
+            fontSize: '18px',
+        },
     },
     productPrimaryImage : {
         height : '450px !important',
@@ -356,11 +466,14 @@ export const styling = theme => ({
     },
     dimensionPaper : {
         display : 'grid',
+        minHeight : '80px',
         alignItems : 'center',
         textAlign : 'center',
         background : `darkgrey`,
-        padding : `5px 0 5px 0`,
         color : 'white',
+    },
+    dimensionContainer : {
+        justifyContent : 'center',
     },
     socialIcon : {
         height : '45px',
@@ -376,21 +489,35 @@ export const styling = theme => ({
         padding : '50px',
         lineHeight: '1.2',
         fontSize: '22px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '10px',
+            lineHeight: '1.2',
+            fontSize: '18px',
+        },
     },
     productSubImage : {
         display : 'grid',
         alignItems: 'center',
         textAlign : '-webkit-center',
+        [theme.breakpoints.down('sm')]: {
+            width: '80%',
+        },
 
     },
     productDescription : {
         fontSize : '20px',
         padding : '20px 0',
+
     },
     productSubDescription : {
         padding : '50px',
         lineHeight : '1.5',
         fontSize : '26px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '10px',
+            lineHeight: '1.2',
+            fontSize: '20px',
+        },
     },
     productReviewContainerEven : {
         minHeight : '350px',
@@ -398,6 +525,9 @@ export const styling = theme => ({
         alignItems : 'center',
         background: 'rgba(0, 0, 0, 0.24)',
         padding: '0 30px 0 30px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '10px 30px 10px 30px',
+        },
     },
     productReviewContainerOdd : {
         minHeight: '350px',
@@ -405,6 +535,9 @@ export const styling = theme => ({
         alignItems: 'center',
         background: 'rgba(0, 0, 0, 0.14)',
         padding: '0 30px 0 30px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '10px 30px 10px 30px',
+        },
     },
     faqContainerEven : {
         display : 'flex',
@@ -429,8 +562,42 @@ export const styling = theme => ({
     shippingContainer : {
         fontSize : '24px',
         lineHeight : '1.5',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '18px',
+            lineHeight: '1.2',
+        },
     },
     shippingImg : {
         width : '100%',
-    }
+    },
+    productCatContainer : {
+        margin :'100px 20px 0 20px',
+        height: '100vh',
+        display: 'flex',
+        alignContent: 'baseline',
+    },
+    productCatImg : {
+        width : '100%',
+        height : 'auto',
+    },
+    catContainer : {
+        textAlign : 'center',
+        minHeight: '300px',
+    },
+    catImgContainer : {
+        minHeight : '250px',
+        display : 'flex',
+        alignItems : 'center',
+    },
+    catLink : {
+        textDecoration : 'none',
+        '&:visited': {
+            color: `initial`,
+            textDecoration: 'none',
+        },
+        '&:hover': {
+            color: `initial`,
+            textDecoration: 'none',
+        },
+    },
 });

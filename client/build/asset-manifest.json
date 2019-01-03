@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.96e37d69.css",
   "main.css.map": "static/css/main.96e37d69.css.map",
-  "main.js": "static/js/main.6042b117.js",
-  "main.js.map": "static/js/main.6042b117.js.map",
+  "main.js": "static/js/main.bd2c94b8.js",
+  "main.js.map": "static/js/main.bd2c94b8.js.map",
   "static\\media\\5gal1.jpg": "static/media/5gal1.cf54d43d.jpg",
   "static\\media\\5gal2.jpg": "static/media/5gal2.37239f64.jpg",
   "static\\media\\5gal3.jpg": "static/media/5gal3.9875df80.jpg",
@@ -10,7 +10,6 @@
   "static\\media\\5gal5.jpg": "static/media/5gal5.903d90a8.jpg",
   "static\\media\\amazon-button.png": "static/media/amazon-button.f75d1e5a.png",
   "static\\media\\clownfish.png": "static/media/clownfish.b8f20bec.png",
-  "static\\media\\fishAbout.jpg": "static/media/fishAbout.9a726afd.jpg",
   "static\\media\\fishLogo.png": "static/media/fishLogo.86120817.png",
   "static\\media\\goal1.jpg": "static/media/goal1.19c418dc.jpg",
   "static\\media\\goal1Transparent.png": "static/media/goal1Transparent.7e8959ba.png",
@@ -38,6 +37,7 @@
   "static\\media\\instagram.png": "static/media/instagram.e2adc36c.png",
   "static\\media\\messenger.png": "static/media/messenger.89bc0e89.png",
   "static\\media\\tank.jpeg": "static/media/tank.87e3cc54.jpeg",
+  "static\\media\\tank2.jpg": "static/media/tank2.e6b5e8f7.jpg",
   "static\\media\\tankTransparent.png": "static/media/tankTransparent.7b4dca52.png",
   "static\\media\\twitter.png": "static/media/twitter.eda5365c.png"
 }

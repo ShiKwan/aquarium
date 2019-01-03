@@ -36,23 +36,23 @@ class Base extends Component {
     }
         renderDimensions = (objDimensions) => {
             return(
-                <Grid container justify='flex-end' direction='row' alignItems='center' spacing={16}>
-                    <Grid item sm={3} md={3} lg={2}>
+                <Grid container justify='flex-end' direction='row' alignItems='center' spacing={16} className={this.props.classes.dimensionContainer}>
+                    <Grid item xs={12} sm={3} md={3} lg={2}>
                         <b>Dimension</b>
                     </Grid>
-                    <Grid item sm={1} md={1} lg={1}>
+                    <Grid item xs={2} sm={1} md={1} lg={1}>
                         <Paper className={this.props.classes.dimensionPaper}>
                             <label className={this.props.classes.dimensionContainer}>H</label> <br />
                             {objDimensions.height}
                         </Paper>
                     </Grid>
-                    <Grid item sm={1} md={1} lg={1}>
+                    <Grid item xs={2} sm={1} md={1} lg={1}>
                         <Paper className={this.props.classes.dimensionPaper}>
                             <label className={this.props.classes.dimensionContainer}>W</label> <br />
                             {objDimensions.width}
                         </Paper>
                     </Grid>
-                    <Grid item sm={1} md={1} lg={1}>
+                    <Grid item xs={2} sm={1} md={1} lg={1}>
                         <Paper className={this.props.classes.dimensionPaper}>
                             <label className={this.props.classes.dimensionContainer}>D</label> <br />
                             {objDimensions.depth}
@@ -66,13 +66,13 @@ class Base extends Component {
         return (
             <React.Fragment>
                 <Grid container className={classes.baseContainer}>
-                    <Grid item sm={7} md={7} lg={7}><h1>{product.name}</h1></Grid>
-                    <Grid item sm={5} md={5} lg={5}><h1>{product.price}</h1></Grid>
-                    <Grid item sm={12} md={12} lg={12}><h3>Product No. {product.modalNumber}</h3></Grid>
+                    <Grid item xs={12} sm={7} md={7} lg={7}><h1>{product.name}</h1></Grid>
+                    <Grid item xs={12} sm={5} md={5} lg={5}><h1>{product.price}</h1></Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12}><h3>Product No. {product.modalNumber}</h3></Grid>
                     {product.dimension ? this.renderDimensions(product.dimension) : <CircularProgress />}
-                    <Grid item sm={12} md={12} lg={12}><p className={classes.productDescription}>{product.description}</p></Grid>
-                    <Grid item sm={12}><label> {this.renderRating(product.rating, classes)} </label></Grid>
-                    <Grid item sm={6} md={6} lg={6} className={classes.socialContainer}>
+                    <Grid item xs={11} sm={12} md={12} lg={12}><p className={classes.productDescription}>{product.description}</p></Grid>
+                    <Grid item xs={12} sm={12}><label> {this.renderRating(product.rating, classes)} </label></Grid>
+                    <Grid item xs={12} sm={6} md={6} lg={6} className={classes.socialContainer}>
                         Share this to your social media feeds! <br />
                         <img src={fbIcon} className={classes.socialIcon} style={{ transition: 'all .7s ease' }} />
                         <img src={tweeterIcon} className={classes.socialIcon} style={{ transition: 'all .7s ease' }} />
