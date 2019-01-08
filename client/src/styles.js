@@ -40,6 +40,9 @@ export const styling = theme => ({
         left : 0,
         top : 0,
         width : '100%',
+        [theme.breakpoints.down('sm')]: {
+            position: 'initial',
+        },
     },
     avatar : {
         background: `${color5}`,
@@ -150,7 +153,7 @@ export const styling = theme => ({
         right: 0,
         margin: 'auto',
         [theme.breakpoints.down('sm')]: {
-            top: "10%",
+            top: "13%",
         },
     },
     wow : {
@@ -176,7 +179,7 @@ export const styling = theme => ({
         [theme.breakpoints.down('sm')]: {
             fontSize: '20px',
             letterSpacing: '1px',
-            display: 'flex',
+            display: 'block',
 
         },
 
@@ -204,6 +207,9 @@ export const styling = theme => ({
         display : 'flex',
         alignSelf : 'center',
         flexDirection : 'row-reverse',
+        [theme.breakpoints.down('sm')]: {
+            display : 'none',
+        },
     },
     navItemPhone: {
         float: 'right',
@@ -258,6 +264,9 @@ export const styling = theme => ({
     },
     aboutImg : {
         width : '400px',
+        [theme.breakpoints.down('sm')]: {
+            width: '330px',
+        },
     },
     about : {
         fontSize : '18px',
@@ -350,6 +359,9 @@ export const styling = theme => ({
     },
     listContainer : {
         listStyle : 'none',
+        [theme.breakpoints.down('sm')]: {
+            fontSize : '18px',
+        },
     },
     listDescription : {
         padding : '5px 0 5px 0',
@@ -371,6 +383,9 @@ export const styling = theme => ({
         minHeight : '400px',
         background: `darkgrey`,
         color: `#272727`,
+        [theme.breakpoints.down('sm')]: {
+            minHeight: '330px',
+        },
     },
     subServiceItem : {
         padding : '0 20px 20px 20px',
@@ -402,6 +417,18 @@ export const styling = theme => ({
     footerIcon : {
         verticalAlign : 'middle',
         color : 'white',
+    },
+    webMobileCopyright : {
+
+        [theme.breakpoints.down('sm')]: {
+            display : 'none',
+        },
+    },
+    footerMobileCopyright : {
+        display : 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'initial',
+        },
     },
     baseContainer : {
         margin : '20px 20px',
@@ -459,6 +486,9 @@ export const styling = theme => ({
     productPrimaryImage : {
         height : '450px !important',
         width : 'auto',
+        [theme.breakpoints.down('sm')]: {
+            height: '330px !important',
+        },
     },
     productSecondaryImages : {
         height : '80px',
@@ -500,7 +530,7 @@ export const styling = theme => ({
         alignItems: 'center',
         textAlign : '-webkit-center',
         [theme.breakpoints.down('sm')]: {
-            width: '80%',
+            display : 'none',
         },
 
     },
@@ -575,6 +605,9 @@ export const styling = theme => ({
         height: '100vh',
         display: 'flex',
         alignContent: 'baseline',
+        [theme.breakpoints.down('sm')]: {
+            margin: '0px 20px 0 20px',
+        },
     },
     productCatImg : {
         width : '100%',
@@ -583,11 +616,21 @@ export const styling = theme => ({
     catContainer : {
         textAlign : 'center',
         minHeight: '300px',
+        '&:hover': {
+            border: 'solid 2px #007ACC',
+        },
+        [theme.breakpoints.down('sm')]: {
+            minHeight : '100px',
+        },
+
     },
     catImgContainer : {
         minHeight : '250px',
         display : 'flex',
         alignItems : 'center',
+        [theme.breakpoints.down('sm')]: {
+            minHeight: '150px',
+        },
     },
     catLink : {
         textDecoration : 'none',

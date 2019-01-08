@@ -22,14 +22,14 @@ class Base extends Component {
                         <h1>Aquarium Tank</h1>
                     </Grid>
                     <Grid item lg={1} md={1} sm={1}></Grid>
-                    <Grid item lg={2} md={3} sm={3} className={classes.catContainer}>
+                    <Grid item lg={2} md={3} sm={3} xs={5} className={classes.catContainer}>
                         <Link to={'/product/tank1'} className={classes.catLink}>
                         <div className={classes.catImgContainer}><img src={product1.primaryImage} className={classes.productCatImg} /></div>
                         <label className={classes.productCatName}>{product1.name}</label><br/>
                         <label className={classes.productCatPrice}>{product1.price}</label>
                         </Link>
                     </Grid>
-                    <Grid item lg={2} md={3} sm={3} className={classes.catContainer}>
+                    <Grid item lg={2} md={3} sm={3} xs={5} className={classes.catContainer}>
                         <Link to={'/product/tank2'} className={classes.catLink}>
                         <div className={classes.catImgContainer}><img src={product2.primaryImage} className={classes.productCatImg} /></div>
                         <label className={classes.productCatName}>{product2.name}</label><br />

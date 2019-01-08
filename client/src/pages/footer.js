@@ -20,12 +20,12 @@ class Footer extends Component {
 
                     </Grid>
                     <Grid item md={10} sm={10}>
-                        <Grid container>
-                            <Grid item md={3} xs={6}>
+                        <Grid container spacing={16} justify='flex-end' direction='row' alignItems='center'>
+                            <Grid item md={3} xs={6} className={classes.webMobileCopyright}>
                                 <h1>Aquoria Tec</h1>
                                 <div>&copy; Copyright 2018 All Rights Reserved. </div>
                             </Grid>
-                            <Grid item md={3} xs={6}>
+                            <Grid item md={3} xs={11}>
                                 <h3>Store</h3>
                                 <ul className={classes.footerList}>
                                     <li><img className={classes.footerIcon} src={amazonIcon} alt="amazon icon" /><label className={classes.footerLabel}>Amazon</label></li>
@@ -33,14 +33,14 @@ class Footer extends Component {
                                     <li><img className={classes.footerIcon} src={ebayIcon} alt="ebay icon" /><label className={classes.footerLabel}>Ebay</label></li>
                                 </ul>
                             </Grid>
-                            <Grid item md={3} xs={6}>
+                            <Grid item md={3} xs={11}>
                                 <h3>Contact Us</h3>
                                 <ul className={classes.footerList}>
                                     <li><img className={classes.footerIcon} src={phoneIcon} alt="phone icon" /><label className={classes.footerLabel}>1-800-333-TANK</label></li>
                                     <li><img className={classes.footerIcon} src={emailIcon} alt="email icon" /><label className={classes.footerLabel}>service@aquoriatec.com</label></li>
                                 </ul>
                             </Grid>
-                            <Grid item md={3} xs={6}>
+                            <Grid item md={3} xs={11}>
                                 <h3>Help</h3>
                                 <ul className={classes.footerList}>
                                     <li><label className={classes.footerLabel}>FAQs</label></li>
@@ -48,6 +48,10 @@ class Footer extends Component {
                                     <li><label className={classes.footerLabel}>User Manuals</label></li>
                                     <li><label className={classes.footerLabel}>Warranty</label></li>
                                 </ul>
+                            </Grid>
+                            <Grid item md={3} xs={12} className={classes.footerMobileCopyright}>
+                                <h1>Aquoria Tec</h1>
+                                <div>&copy; Copyright 2018 All Rights Reserved. </div>
                             </Grid>
                         </Grid>
                         <div>

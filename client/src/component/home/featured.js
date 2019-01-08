@@ -23,14 +23,14 @@ class Featured extends Component {
                 <Grid container className={classes.featuredContainer}>
                     <Grid container className={classes.featureItemContainer}>
                         <Grid item lg={1} md={1} sm={1}></Grid>
-                        <Grid item lg={5} md={5} sm={12} xs={12} className={classes.featuredImage}>
+                        <Grid item lg={5} md={5} sm={11} xs={11} className={classes.featuredImage}>
                             <h1>Our Best-Selling Product</h1>
 
                             <img className={classes.aboutImg} src={tankImg} alt="featured aquarium" />
                             <br/>
                             <h2>Aquoria Tec Aquarium Kit, 5-Gal</h2>
                         </Grid>
-                        <Grid item lg={5} md={5} sm={12} xs={12} className={classes.featuredSpecs}>
+                        <Grid item lg={5} md={5} sm={11} xs={11} className={classes.featuredSpecs}>
                             <label>
                                 A modern looking 5 gallon nano aquarium with etched-glass tank with aluminium trim on four edges. It comes with low energy consumption and powerful 37 LED Lighting System
                                 to keep your freshwater pets healthy and stimulate plant growth. A well-thought filtration system that is capable of boasting powerful 3-stage system with oversized mechanical, chemical, and biological media for clean water.
