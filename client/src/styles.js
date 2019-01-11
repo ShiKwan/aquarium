@@ -111,15 +111,14 @@ export const styling = theme => ({
 
         [theme.breakpoints.down('sm')]: {
             backgroundImage: `url(${hero13Img})`,
+            minHeight: '800px',
             backgroundColor: 'black',
             backgroundAttachment: 'initial',
-            height : '100vh',
+            backgroundSize : 'contain',
         },
         [theme.breakpoints.down('xs')]: {
             backgroundImage: `url(${hero13Img})`,
             backgroundColor: 'black',
-            backgroundAttachment: 'initial',
-            height: '100vh',
         },
     },
     parallaxGoal : {
