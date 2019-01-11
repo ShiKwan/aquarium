@@ -14,8 +14,7 @@ class Service extends Component {
         return(
             <div className={classes.root}>
                 <Grid container className={classes.serviceContainer}>
-                    <Grid item sm={12} md={12} lg={12}><h1 className={classes.serviceHeader}>Services</h1></Grid>
-
+                    <h1 className={classes.serviceHeader}>Services</h1>
                     <Grid item sm={12} md={4} lg={4} xs={12} className={classes.serviceItemContainer}>
                         <Paper className={classes.servicePaper} style={{ transition: 'all .7s ease' }}>
                             <h3 className={classes.serviceItemHeader}>Product Manual</h3>

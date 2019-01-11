@@ -322,6 +322,9 @@ export const styling = theme => ({
     ratingItemContainer : {
         display: 'unset',
         alignSelf: 'center',
+        [theme.breakpoints.down('sm')]: {
+            display: 'contents',
+        },
     },
     reviewHeader : {
         display : 'block',
@@ -374,6 +377,9 @@ export const styling = theme => ({
     serviceHeader : {
         fontSize : '36px',
         color: `#272727`,
+        margin : 'auto',
+        left : '0',
+        right : '0',
         lineHeight : '1.5',
     },
     serviceContainer : {
@@ -433,6 +439,7 @@ export const styling = theme => ({
         display : 'none',
         [theme.breakpoints.down('sm')]: {
             display: 'initial',
+            marginBottom : '25px',
         },
     },
     baseContainer : {

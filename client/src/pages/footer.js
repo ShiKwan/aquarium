@@ -15,10 +15,8 @@ class Footer extends Component {
         const { classes } = this.props
         return (
             <React.Fragment>
-                <Grid container className={classes.footerContainer} >
-                    <Grid item md={1} sm={1}>
+                <Grid container className={classes.footerContainer} justify='center' direction='row' alignItems='center' >
 
-                    </Grid>
                     <Grid item md={10} sm={10}>
                         <Grid container spacing={16} justify='flex-end' direction='row' alignItems='center'>
                             <Grid item md={3} xs={6} className={classes.webMobileCopyright}>
@@ -49,7 +47,7 @@ class Footer extends Component {
                                     <li><label className={classes.footerLabel}>Warranty</label></li>
                                 </ul>
                             </Grid>
-                            <Grid item md={3} xs={12} className={classes.footerMobileCopyright}>
+                            <Grid item md={3} xs={11} className={classes.footerMobileCopyright}>
                                 <h1>Aquoria Tec</h1>
                                 <div>&copy; Copyright 2018 All Rights Reserved. </div>
                             </Grid>
