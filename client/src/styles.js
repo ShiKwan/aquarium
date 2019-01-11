@@ -287,7 +287,6 @@ export const styling = theme => ({
         fontSize : '22px',
     },
     featuredContainer : {
-        minHeight: '650px',
         display: 'grid',
         alignSelf: 'center',
         background : 'lightgrey',

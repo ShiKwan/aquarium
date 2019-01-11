@@ -20,9 +20,8 @@ class Featured extends Component {
         const { classes } = this.props;
         return(
             <React.Fragment>
-                <Grid container className={classes.featuredContainer}>
+                <Grid container className={classes.featuredContainer} justify='center' direction='row' alignItems='center'>
                     <Grid container className={classes.featureItemContainer}>
-                        <Grid item lg={1} md={1} sm={1}></Grid>
                         <Grid item lg={5} md={5} sm={11} xs={11} className={classes.featuredImage}>
                             <h1>Our Best-Selling Product</h1>
 
@@ -49,7 +48,6 @@ class Featured extends Component {
                             </ul>
                             <Button className={classes.serviceButton} onClick={()=>this.handleLink('/product/tank1')}>View Details</Button>
                         </Grid>
-                        <Grid item lg={1} md={1} sm={1}></Grid>
                     </Grid>
                 </Grid>
             </React.Fragment>

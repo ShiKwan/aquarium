@@ -122,7 +122,7 @@ class SwipeableTextMobileStepper extends React.Component {
         return (
             <div className={classes.ratingContainer}>
 
-                <Grid container>
+                <Grid container justify='center' direction='row' alignItems='center'>
                     <Grid item md={12} lg={3} sm={12} xs={12} className={classes.reviewHeader}>
                         <h1>Customer Reviews</h1>
                     </Grid>
