@@ -111,9 +111,15 @@ export const styling = theme => ({
 
         [theme.breakpoints.down('sm')]: {
             backgroundImage: `url(${hero13Img})`,
+            backgroundColor: 'black',
+            backgroundAttachment: 'initial',
+            height : '100vh',
         },
         [theme.breakpoints.down('xs')]: {
             backgroundImage: `url(${hero13Img})`,
+            backgroundColor: 'black',
+            backgroundAttachment: 'initial',
+            height: '100vh',
         },
     },
     parallaxGoal : {
@@ -128,7 +134,9 @@ export const styling = theme => ({
         display: 'flex',
         maxWidth: '100vw !immportant',
         [theme.breakpoints.down('sm')]: {
+            backgroundColor : 'black',
             backgroundImage: `url(${goal2Img})`,
+            backgroundAttachment: 'initial',
             backgroundSize: '100%',
         },
     },
