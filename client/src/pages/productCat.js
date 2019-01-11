@@ -10,7 +10,9 @@ import { withStyles } from '@material-ui/core/styles';
 import { Grid, Divider, Button } from '@material-ui/core';
 
 class Home extends Component {
-
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
     render() {
         const { product, classes } = this.props;
         return (

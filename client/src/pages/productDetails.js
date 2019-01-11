@@ -18,7 +18,9 @@ class Home extends Component {
         console.log(this.props);
         this.props.getProductDetails(params.item);
     }
-
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
     render() {
         const { product, classes } = this.props;
         return (
